@@ -71,6 +71,30 @@ finally, start up the net-work:
 ```
 docker-compose -f docker-compose-cli.yaml up  
 ```
-now
-
-
+if everything goes well, the fabric net-work is builded successfully<br>
+install my demo
+```
+https://github.com/jsphLim/Hyperledger-Fabric.git
+```
+start up startFabric.sh in Hyperledger-Fabric/app
+```
+sudo ./startFabric.sh
+```
+then register a admin:
+```
+node registerAdmin.js
+```
+then register a User:
+```
+node registerUser.js
+```
+if everything goes well,we can start the server:
+```
+node server.js
+```
+then we can visit the app at:
+```
+localhost:7775 
+```
+this demo only has two function: 'get' and 'set',It's just for study Hyperledger-Fabric<br>
+If something wrong, you can contact me by the gmail
