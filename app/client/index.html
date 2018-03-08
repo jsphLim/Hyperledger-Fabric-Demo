@@ -1,0 +1,51 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>demo</title>
+  <link rel="icon" href="favicon.png" type="image/gif">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+
+
+
+<body ng-app="application" ng-controller="appController">
+
+    <div class="form-group">
+      <label>Get</label>
+      <br>
+      输入一个key
+      <input id="createName" class="form-control" type="text" placeholder="" ng-model="container_key">
+      <input id="querySubmit" type="submit" value="Query" class="btn btn-primary" ng-click="Get()">
+    </div>
+
+    <table id="query_res" class="table" align="center">
+
+
+      <tr>
+        <td>{{query_res}}</td>
+      </tr>
+    </table>
+
+
+    <div class="form-group">
+      <label>Set</label>
+      <br>
+
+      输入key:<input class="form-control" name="assetSelect" placeholder="" ng-model="holder.id">
+      输入value:<input class="form-control" name="assetSelect" placeholder="" ng-model="holder.content">
+      <input id="transferSubmit" type="submit" value="Set" class="btn btn-primary" ng-click="Set()">
+    </div>
+
+
+  </div>
+</body>
+<!-- requiring the angular page -->
+<script type="text/javascript" src="app.js"> </script>
+
+</html>

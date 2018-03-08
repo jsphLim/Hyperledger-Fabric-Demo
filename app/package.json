@@ -1,0 +1,6 @@
+{
+    "name": "Fabric-container-app",
+    "version": "1.0.0",
+    "description": "Hyperledger Fabric Demo",
+    "main": "server.js",
+}
