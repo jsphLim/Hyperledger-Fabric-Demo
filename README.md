@@ -74,7 +74,7 @@ docker-compose -f docker-compose-cli.yaml up
 If everything goes well, the fabric net-work is builded successfully<br>
 install my demo
 ```
-https://github.com/jsphLim/Hyperledger-Fabric.git
+git clone https://github.com/jsphLim/Hyperledger-Fabric.git
 ```
 Start up startFabric.sh in Hyperledger-Fabric/app
 ```
