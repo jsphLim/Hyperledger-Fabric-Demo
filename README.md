@@ -1,50 +1,76 @@
 ### Hyperledger-Fabric
 
-#### 开发环境
+#### environment
 ubuntu16.10
 
-#### 前期准备
-docker安装 (我使用的是1.13.1)
+#### Preparation
+install docker (version 1.13.1)
 ```
 sudo apt install docker.io  
 ```
-docker-compose安装 (我使用1.19.0)
+install docker-compose (version 1.19.0)
 ```
 sudo curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose  
 ```
-修改下权限
+modify the permission
 ```
 sudo chmod +x /usr/local/bin/docker-compose 
 ```
 
-go语言 (我使用的是go1.8.3)<br>
+install go (version go1.8.3)<br>
 
-下载地址: https://golang.org/dl/ 选择合适的版本 我的版本是go1.8.3.linux-amd64.tar.gz
+download url: https://golang.org/dl/ my version is go1.8.3.linux-amd64.tar.gz
 ```
 tar -zxvf go1.8.3.linux-amd64.tar.gz -C /usr/local  
 ```
-之后就可以在/usr/local下看到go文件夹了,接着配置环境变量，我的workspace是$HOME/go<br>
+after that we can find /go at /usr/local，and my workspace is at $HOME/go<br>
 ```
 sudo vi ~/.profile  
 ```
-在末尾加上
+then add the following instruction
 ```
 export PATH=$PATH:/usr/local/go/bin   
 export GOROOT=/usr/local/go   
 export GOPATH=$HOME/go   
 export PATH=$PATH:$HOME/go/bin  
 ```
-查看go是否安装成功
+then we should check whether go is installed
 ```
 go version
 ```
-#### Fabric网络搭建
-进入工作目录$HOME/go
+#### Build a fabric net-work
+enter the workplace $HOME/go
 
-创建以下一系列文件夹:
+Create the following series of folders
 
 $HOME/go/src/github.com/hyperledger
 
-创建后进入hyperledger文件夹下，执行以下指令获取Fabric源码:
+Enter the hyperledger folders,and download fabric source code
+```
+git clone https://github.com/hyperledger/fabric.git  
+```
+after that,Enter fabric/examples/e2e_cli
+
+There are some shell files for us to start up the fabric net-work
+
+firstly，start up download-dockerimages.sh to download images we need from docker hub:
+```
+chmod +x download-dockerimages.sh  
+```
+```
+./download-dockerimages.sh  
+```
+then,use the following instruction to check wether the  images is downloaded successfully
+```
+docker images  
+```
+finally, start up the net-work:
+```
+./network_setup.sh up  
+```
+```
+docker-compose -f docker-compose-cli.yaml up  
+```
+now
 
 
