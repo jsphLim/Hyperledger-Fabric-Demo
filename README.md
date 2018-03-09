@@ -97,4 +97,4 @@ Then we can visit the app at:
 localhost:7775 
 ```
 This demo only has two function: 'get' and 'set',It's just for study Hyperledger-Fabric<br>
-If something wrong, you can contact me by the gmail
+If something wrong, you can contact me by my gmail
