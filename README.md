@@ -17,7 +17,7 @@ Modify the permission
 sudo chmod +x /usr/local/bin/docker-compose 
 ```
 
-Install go (version go1.8.3)<br>
+Install golang (version go1.8.3)<br>
 
 Download url: https://golang.org/dl/ my version is go1.8.3.linux-amd64.tar.gz
 ```
